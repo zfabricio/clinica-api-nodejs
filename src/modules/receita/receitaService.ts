@@ -1,4 +1,4 @@
-import { ReceitaMedica } from "models";
+import { ReceitaMedica } from "./ReceitaMedica";
 
 
 export const receitaService = {

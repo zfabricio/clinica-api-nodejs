@@ -1,28 +1,27 @@
-import { PlanoDeSaude } from "models";
-
+import { PlanoSaude } from "./planoSaude";
 
 export const planoService = {
   async getAll() {
-    return await PlanoDeSaude.findAll();
+    return await PlanoSaude.findAll();
   },
 
   async getById(id: number) {
-    return await PlanoDeSaude.findByPk(id);
+    return await PlanoSaude.findByPk(id);
   },
 
   async create(data: any) {
-    return await PlanoDeSaude.create(data);
+    return await PlanoSaude.create(data);
   },
 
   async update(id: number, data: any) {
-    const plano = await PlanoDeSaude.findByPk(id);
+    const plano = await PlanoSaude.findByPk(id);
     if (!plano) throw new Error('Plano de Saude não encontrado');
     await plano.update(data);
     return plano;
   },
 
   async delete(id: number) {
-    const plano = await PlanoDeSaude.findByPk(id);
+    const plano = await PlanoSaude.findByPk(id);
     if (!plano) throw new Error('Plano de Saude não encontrado');
     await plano.destroy();
     return;

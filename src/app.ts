@@ -1,3 +1,4 @@
+import './module-alias';
 import express from 'express';
 import dotenv from 'dotenv';
 import sequelize from './config/database';

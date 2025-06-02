@@ -1,5 +1,4 @@
-import { Consulta } from "models";
-
+import { Consulta } from "./consulta";
 
 export const consultaService = {
     async getAll() {

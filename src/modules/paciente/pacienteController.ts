@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { pacienteService } from './pacienteService';
+import {pacienteService}  from './pacienteService';
 
 export const pacienteController = {
   async getAll(req: Request, res: Response) {

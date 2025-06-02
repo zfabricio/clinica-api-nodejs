@@ -1,12 +1,13 @@
+import sequelize from '../config/database';
 import { Paciente } from "../modules/paciente/paciente";
 import { Medico } from "../modules/medico/medico";
 import { Consulta } from "../modules/consulta/consulta";
 import { Pagamento } from "../modules/pagamento/pagamento";
 import { ReceitaMedica } from "../modules/receita/ReceitaMedica";
-import PlanoDeSaude  from "../modules/plano/PlanoSaude";
+import { PlanoSaude } from "../modules/plano/planoSaude";
 
-Paciente.belongsTo(PlanoDeSaude);
-PlanoDeSaude.hasMany(Paciente);
+Paciente.belongsTo(PlanoSaude);
+PlanoSaude.hasMany(Paciente);
 
 Consulta.belongsTo(Paciente);
 Paciente.hasMany(Consulta);
@@ -21,10 +22,11 @@ Pagamento.belongsTo(Consulta);
 Consulta.hasMany(Pagamento);
 
 export {
-  Paciente,
-  PlanoDeSaude,
-  Medico,
-  Consulta,
-  ReceitaMedica,
-  Pagamento,
+    sequelize,
+    Paciente,
+    PlanoSaude,
+    Medico,
+    Consulta,
+    ReceitaMedica,
+    Pagamento,
 };

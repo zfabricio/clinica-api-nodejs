@@ -1,5 +1,4 @@
-import { Pagamento } from "models";
-
+import { Pagamento } from "./pagamento";
 
 export const pagamentoService = {
   async getAll() {

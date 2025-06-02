@@ -1,7 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../../config/database';
 
-export default class PlanoSaude extends Model {}
+export class PlanoSaude extends Model {}
 
 PlanoSaude.init({
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
